@@ -21,7 +21,7 @@ answers = [
     ),
     ("=", "==", "!=", "==="),
 ]
-# Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas --- prueba
+# Índice de la respuesta correcta para cada pregunta, el el mismo orden que las preguntas
 correct_answers_index = [1, 2, 0, 3, 1]
 
 # El usuario deberá contestar 3 preguntas
@@ -36,7 +36,13 @@ for _ in range(3):
 
     # El usuario tiene 2 intentos para responder correctamente
     for intento in range(2):
-        user_answer = int(input("Respuesta: ")) - 1
+        user_answer = (input("Respuesta: ")).strip()
+        if user_answer.isdigit() and user_answer in {"1", "2", "3", "4"}: # verifico si el numero ingresado es válido
+            user_answer = int(user_answer) -1
+        else:
+            print("Respuesta no válida, cerrando el programa") # si no lo es, finalizo el programa con error
+            exit(1)
+
         # Se verifica si la respuesta es correcta
         if user_answer == correct_answers_index[question_index]:
             print("¡Correcto!")
