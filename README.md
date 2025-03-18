@@ -1,2 +1,3 @@
 # Seminario-Python
-Seminario de Lenguajes: Python 2025
+Tomás Ressia
+42294200
