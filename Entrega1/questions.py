@@ -58,3 +58,4 @@ for questions, answers, correct_answers_index in questions_to_ask:
     # Se imprime un blanco al final de la pregunta
     print()
 print("Su puntuacion final es ", str(score), "de 3")
+#commit test
