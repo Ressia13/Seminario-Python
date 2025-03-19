@@ -18,7 +18,10 @@ def show_menu():  #Se muestra el menú en consola
 
 
 def add_prod(inv):  #Agrega un producto a la lista inv
-    product = [input("Nombre: "), (input("cantidad: ").strip())]
+    product = [input("Nombre: ").strip(), (input("cantidad: ").strip())]
+    if not product[0].strip():
+        print("Ingrese un nombre para el producto")
+        return
     if product[1].isdigit():
         product[1] = int(product[1])
     else:
