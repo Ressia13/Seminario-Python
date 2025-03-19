@@ -7,7 +7,8 @@
 El inventario puede ser almacenado utilizando un diccionario simple, donde las claves sean los nombres de los productos y los valores sean las cantidades.
 Se deben manejar situaciones simples como la introducción de productos duplicados o la eliminación de productos inexistentes.'''
 
-def show_menu():  #Se muestra el menú en consola
+def show_menu():  
+'''Se muestra el menú en consola'''
     print("")
     print("---- Menú ----")
     print("1. Agregar producto al inventario")
@@ -17,7 +18,8 @@ def show_menu():  #Se muestra el menú en consola
     print("------------")
 
 
-def add_prod(inv):  #Agrega un producto a la lista inv
+def add_prod(inv):  
+'''Agrega un producto a la lista inv, recibe como parámetro el inventario y lo modifica sin devolver ningun valor directamente'''
     product = [input("Nombre: "), (input("cantidad: ").strip())]
     if product[1].isdigit():
         product[1] = int(product[1])
@@ -38,6 +40,7 @@ def add_prod(inv):  #Agrega un producto a la lista inv
 
 
 def del_product(inv):
+'''Elimina un valor del inventario, el cual recibe como paramentro y lo devuelve modificado, si se encuentra el producto'''
     print()
     if not inv:
         print("Inventario vacío.") #Verifico que la lista no este vacia
@@ -52,6 +55,7 @@ def del_product(inv):
 
 
 def show_inv(inv):
+    '''muestra el inventario actual'''
     print()
     if not inv:
         print("##Inventario vacío##") #Verifico lista inv vacia
@@ -66,6 +70,7 @@ def show_inv(inv):
 
 
 def main():
+'''muestra en bucle el menu de opciones'''
     inv = []    #inicializo el inventario
     while True:   #Muestra el menu en bucle
         show_menu()
