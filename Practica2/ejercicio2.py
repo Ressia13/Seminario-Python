@@ -15,3 +15,4 @@ for title in titles:
         max = len(title)
         titlemax = title
 print("maximo manual: ", titlemax)
+
