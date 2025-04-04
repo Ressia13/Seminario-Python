@@ -11,10 +11,11 @@ Requisitos
   
   Clonar el repositorio (opcional)
   
-  """bash"""
-  git clone https://github.com/Ressia13/Seminario-Python
-  cd Seminario-Python
+  en bash:
   
-  Instalar las dependencias
+  - git clone https://github.com/Ressia13/Seminario-Python
+  - cd Seminario-Python
   
-  pip install notebook pandas matplotlib
+  Instalar las dependencias:
+  
+  - pip install notebook pandas matplotlib
